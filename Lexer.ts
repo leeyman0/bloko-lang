@@ -25,7 +25,7 @@ export const ws: RegExp = /^\s+/;
 // Comments are special because they take precedence over the rest of them
 export const com: RegExp = /^\/\/(.*)/;
 // A number can be recognized, but will not be parsed until the later stages
-export const num: RegExp = /^(0[xobd])?([A-Fa-f0-9]+)/;
+export const num: RegExp = /^((?:0[xobd])?[A-Fa-f0-9]*(?:\.[0-9]+)?)/;
 // A symbol is the same as a C symbol
 export const sym: RegExp = /^([A-Za-z]\w*)/;
 // An operator can be any one or multiple of the following:
@@ -56,10 +56,10 @@ export function tokenToString(t: Token): string {
 // The main lexer class
 export class Lexer {
     source: string;   // Is the source string 
-    right: string;    // Is the string that we have
+    right: string;    // Is the string that we have yet to process
     position: number; // Is the index
     constructor(input: string) {
-        this.source = input + "\n";
+        this.source = input;
         this.right = this.source;
         this.position = 0;
     }
