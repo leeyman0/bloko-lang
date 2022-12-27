@@ -1,0 +1,13 @@
+#+TITLE: The Bloko Language --- Running and Usage
+* Basic Information
+Bloko is an experimental proof-of-concept language that envisions a much simpler
+concurrency model using multilinear programming.
+* To Run
+First, you will need to install the repository.
+#+NAME: How to Install
+#+BEGIN_SRC: shell
+git clone https://github.com/leeyman0/bloko-lang
+cd bloko-lang/
+npm install
+#+END_SRC
+
