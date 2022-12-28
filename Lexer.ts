@@ -25,7 +25,7 @@ export const ws: RegExp = /^\s+/;
 // Comments are special because they take precedence over the rest of them
 export const com: RegExp = /^\/\/(.*)/;
 // A number can be recognized, but will not be parsed until the later stages
-export const num: RegExp = /^((?:0[xobd])?[A-Fa-f0-9]*(?:\.[0-9]+)?)/;
+export const num: RegExp = /^((?:0[xobd])?[A-Fa-f0-9]+(?:\.[A-Fa-f0-9]+)?)/;
 // A symbol is the same as a C symbol
 export const sym: RegExp = /^([A-Za-z]\w*)/;
 // An operator can be any one or multiple of the following:
@@ -51,7 +51,7 @@ dictionary.set("Num", num);
 
 // Simple helper function that prints the value of the token 
 export function tokenToString(t: Token): string {
-    return `${t.ttype}\t[${JSON.stringify(t.value)}]`
+    return `${t.ttype}\t[${t.value}]`
 }
 // The main lexer class
 export class Lexer {

@@ -1,0 +1,15 @@
+#+TITLE: What Needs Doing
+1. [-] Create Lexer
+   - [X] Make Tests
+   - [X] Write Code
+   - [ ] Add Positioning
+2. [ ] Design Language
+   - [ ] Create grammar
+   - [ ] Design Underlying type system
+   - [ ] Design Concurrency Model
+   - [ ] Create Implementation Itinerary
+3. [ ] Create Parser
+   - [ ] Design Parser
+   - [ ] Transform logical atoms into meaningful code, catch lexing errors
+   - [ ] Expect certain syntax, catch syntax errors
+4. [ ] Create Compiler --- /more information to be completed in step 2/

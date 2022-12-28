@@ -1,0 +1,42 @@
+#+TITLE: How Tokens Should Be Handled By The Parser
+* String
+The string contents should be turned into the actual data that characters
+represent. The escape sequences should be turned into the characters that they
+map to.
+* Number
+The ~num~ regex captures a few more strings that cannot represent numbers. The
+strings that cannot represent numbers will throw a Numeric error.
+- These numbers are fine:
+  - 0xabcdef
+  - 0d989898
+  - 0o676767
+  - 0b010101
+  - 123456789
+  - 123456.7890
+- These numbers are not fine, but the regex matches them to catch the errors:
+  - 0xab.03
+  - 0o9f
+  - 0daaaa
+  - 0b23
+* Operator
+Some operators (namely ~&~ and ~|~) work over other operators. So these operators
+cannot work on their own. An operator segment cannot end in these operators, and
+two or more of these operators cannot be together.
+* Whitespace
+Whitespace can indicate some meanings, but these meanings fade when the program
+is lexed.
+* Comments
+Comments are the same as whitespace, and are also ignored.
+* Symbols
+Symbols are equivalent to their strings. Sometimes these symbols will indicate
+a keyword. Later on, these symbols will be assigned a type according to their
+usage.
+* Punctuation
+Punctuation is not processed too much by the Lexer. Later on at the parsing stage
+the symbols are matched with each other. They indicate a scope.
+* Unknown
+Unknown characters throw errors.
+* End of File
+End of files are the end of the program.
+
+
