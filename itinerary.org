@@ -1,4 +1,5 @@
 #+TITLE: What Needs Doing
+* Project Roadmap
 1. [-] Create Lexer
    - [X] Make Tests
    - [X] Write Code
@@ -13,3 +14,6 @@
    - [ ] Transform logical atoms into meaningful code, catch lexing errors
    - [ ] Expect certain syntax, catch syntax errors
 4. [ ] Create Compiler --- /more information to be completed in step 2/
+* Issues
+- [ ] The gitignore is wrong, allow jest.config.js as well as other config files
+- [ ] We need a more sane layout
