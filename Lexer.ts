@@ -93,7 +93,7 @@ export class Lexer {
 		    let lines = a[0].split("\n");
 		    if (lines.length > 1) {// If there are newlines
 			this.line += lines.length - 1;
-			this.col = lines[lines.length - 1].length;
+			this.col = lines[lines.length - 1].length + 1;
 		    }
 		}
 		// make the token
