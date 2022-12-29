@@ -3,7 +3,8 @@
 1. [-] Create Lexer
    - [X] Make Tests
    - [X] Write Code
-   - [ ] Add Positioning
+   - [X] Add Positioning
+   - [ ] Update Tests
 2. [ ] Design Language
    - [ ] Create grammar
    - [ ] Design Underlying type system
@@ -15,5 +16,5 @@
    - [ ] Expect certain syntax, catch syntax errors
 4. [ ] Create Compiler --- /more information to be completed in step 2/
 * Issues
-- [ ] The gitignore is wrong, allow jest.config.js as well as other config files
-- [ ] We need a more sane layout
+- [X] The gitignore is wrong, allow jest.config.js as well as other config files
+- [ ] We need a more sane layout --- can fix later
